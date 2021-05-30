@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Practical 5</title>
+    <script>
+        function validateform() {
+            var name = document.forms["myform"]["fname"].value;
+            var ph_no = document.forms["myform"]["phone"].value;
+            var e_id = document.forms["myform"]["email"].value;
+            var b_date = document.forms["myform"]["date"].value;
+            var psw = document.forms["myform"]["pass"].value;
+            var cpsw = document.forms["myform"]["cpass"].value;
+            var atposition = e_id.indexOf("@");
+            var dotposition = e_id.lastIndexOf(".");
+            if (name == null || name == "") {
+                alert("Please Enter Your Name");
+                return false;
+            }
+
+            if (ph_no == null || ph_no == "") {
+                alert("Please Enter Your Phone Number");
+                return false;
+            } else if (ph_no.length != 10) {
+                alert("please enter valid phone number");
+                return false;
+            }
+            if (e_id == null || e_id == "") {
+                alert("Please Enter Your Email Id");
+                return false;
+            } else if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= e_id.length) {
+                alert("Please enter a valid e-mail address");
+                return false;
+            }
+            if (b_date == null || b_date == "") {
+                alert("Please Enter Your Birth Date");
+                return false;
+
+
+            }
+            if (psw == null || psw == "") {
+                window.alert("Please Enter Your Password");
+                return false;
+            } else if (psw.length < 8) {
+                alert("Password must be 8 character long!");
+                return false; 
+            }
+
+            if (cpsw == null || cpsw == "") {
+                window.alert("Please Re-Enter Your Password");
+
+                return false;
+
+            } else if (psw != cpsw) {
+                window.alert("Password must be same as confirm password");
+
+                return false;
+            }
+            document.write("<h1>Account Created Successfully!</h1>");
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <form name="myform" method="post" onsubmit=" return validateform()">
+        <h1 align="center">Registration Form</h1>
+        <fieldset>
+            <legend>Create New Account</legend><br>
+            Enter Your Name: <br>
+            <input type="text" name="fname" style="width:100%;"><br><br>
+            Enter Your Phone Number: <br>
+            <input type="number" name="phone" style="width: 100%;"><br><br>
+            Enter Your Email Id: <br>
+            <input type="text" name="email" style="width: 100%;"><br><br>
+            Enter Birthdate: <br>
+            <input type="date" name="date" style="width: 100%;"> <br><br>
+            Enter Password: <br>
+            <input type="password" name="pass" style="width: 100%;"><br><br>
+            Confirm Password: <br>
+            <input type="password" name="cpass" style="width: 100%;"><br><br>
+            <input type="submit" name="submit" value="submit" style="width: 100%;">
+        </fieldset>
+    </form>
+</body>
+
+</html>

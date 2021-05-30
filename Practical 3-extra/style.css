@@ -1,0 +1,33 @@
+
+div{
+	padding: 0 ;
+	margin: 0;
+}
+#nav{
+	background-color: #000033;
+	list-style-type: none;
+}
+#nav li{
+	display: inline-block;
+  	font-size: 20px;
+  	padding: 20px;
+  	box-sizing: border-box;
+}
+#nav li:hover{
+	background-color: black;
+	text-decoration: underline;
+}
+#nav a{
+	color: white;
+	text-decoration: none;
+}
+#nav a:active{
+background-color: #8080ff;
+}
+
+.body{
+
+	background: linear-gradient(to top, #00cc66 9%, #000066 93%);
+	color: white;
+	height: 600px;
+}

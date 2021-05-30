@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-6></title>
+    
+</head>
+
+<body>
+	<fieldset>
+		<legend>Event Handling</legend>
+			<p >Write Something here ...</p>
+		    <input type="text" id="myText" style="width: 100%;" >
+		    <br>
+		    <br>
+		    <button onclick="myFunction()" style="width: 100%;">Click Me!!</button>
+		    <p id="demo"></p>
+	</fieldset>
+<script>
+function myFunction() {
+  var x = document.getElementById("myText").value;
+  document.getElementById("demo").innerHTML = "You Wrote : "+x;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+input{
+		width: 100%;
+	}
+	.center {
+		position:absolute;
+		top: 30%;
+		left: 35%;
+		border: 5px solid #371005;
+		padding: 10px;
+		background: rgba(55, 16, 5, 0.5);
+		color: white;
+		width: 30%;
+	}
+	body{
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-image: url('1.jpg');
+	}
+	.btn{
+		color: white; 
+		background-color:rgb(55,16,5);
+	}

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+window.onload = function () {
+
+//Better to construct options first and then pass it as a parameter
+var options = {
+	title: {
+		text: "Mid- Semester Result of Banshita Gangwar"              
+	},
+	data: [              
+	{
+		// Change type to column "doughnut", "line", "splineArea", etc.
+		type: "splineArea",
+		dataPoints: [
+			{ label: "Analysis & Design Algorithm",  y: 35  },
+			{ label: "Professional Ethics", y: 31  },
+			{ label: "Computer Networks", y: 37  },
+			{ label: "Cyber Security",  y: 33  },
+			{ label: "Web Developement",  y: 38  }
+			
+		]
+	}
+	]
+};
+
+$("#chartContainer").CanvasJSChart(options);
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>

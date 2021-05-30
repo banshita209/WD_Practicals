@@ -1,0 +1,88 @@
+<html>
+<head>
+    
+	<title>Registration form</title>
+    
+<script> 
+function validateForm()                                    
+{ 
+    var name = document.forms["myform"]["txtname"];               
+    var address = document.forms["myform"]["address"];    
+    var email = document.forms["myform"]["txtemail"];  
+    var gender =  document.forms["myform"]["gender"];  
+    var pn = document.forms["myform"]["txtpn"];  
+    
+    if (name.value == "")                                  
+    { 
+        window.alert("Please enter your name."); 
+        name.focus(); 
+        return false; 
+    } 
+    if (address.value == "")                               
+    { 
+        window.alert("Please enter your address."); 
+        address.focus(); 
+        return false; 
+    } 
+    if (gender.value == "")                           
+    { 
+        window.alert("Please select your gender."); 
+        gender.focus(); 
+        return false; 
+    } 
+     if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+    if (pn.value == "")                        
+    { 
+        window.alert("Please enter your Mobile no"); 
+        mn.focus(); 
+        return false; 
+    } 
+    return true; 
+}
+</script> 
+</head>
+
+<body bgcolor="lightgreen">
+	<h1 align="center">Validation Form</h1>
+ <form name="myform" onsubmit="validateForm()">
+
+	   	<table border="1" width="400"  align="center" height="450">
+	   <tr>
+	   	<td>Name:</td>
+	   	<td><input type="text" name="txtname" size="20"></td>
+	   </tr>
+
+	   <tr>
+	   	<td> Address:</td>
+	   	<td><textarea name="address" cols="9" rows="4"></textarea></td>
+	   </tr>
+
+        <tr>
+        <td>Gender:</td>
+        <td><input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female</td>
+       </tr>
+
+
+	   <tr>
+	   	<td>Email:</td>
+	   	<td><input type="text" name="txtemail" size="20"></td>
+	   </tr>
+
+	   <tr>
+	   	<td>Phone number:</td>
+	   	<td><input type="text" name="txtpn" size="20"></td>
+	   </tr>
+
+	   <tr>
+	   	<td align="center" colspan="2"><input type="submit" name="btnsubmit" value="Submit"></td>
+	   </tr>
+</table>
+</form>
+</body>
+</html>

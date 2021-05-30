@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practical 10</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<canvas id="myChart"></canvas>
+	</div>
+	<script>
+		let myChart=document.getElementById('myChart').getContext('2d');
+
+		// Global Options
+	    Chart.defaults.global.defaultFontFamily = 'Lato';
+	    Chart.defaults.global.defaultFontSize = 18;
+	    Chart.defaults.global.defaultFontColor = '#777';
+
+		let barChart =new Chart(myChart, {
+			type :'bar',
+			data:{
+				labels:['ADA','CN','WD','PE','CS'],
+				datasets:[{
+					label:'Marks',
+					data:[35,37,38,31,33,40,0],
+					backgroundColor:['rgba(0, 0, 102, 0.7)','rgba(128, 0, 0, 0.7)','rgba(45, 179, 0, 0.7)','rgba(204, 122, 0, 0.7)','rgba(255, 0, 85, 0.7)'],
+			        borderWidth:1,
+			        borderColor:'#777',
+			        hoverBorderWidth:3,
+			        hoverBorderColor:'#000'
+			   			 }]
+				},
+			options:{
+				title:{
+		          	display:true,
+		          	text:'Mid Semester Result Chart of Banshita Gangwar',
+		          	fontSize:25
+	        	},
+        	legend:{
+        		display:true,
+	          	position:'right',
+	          	labels:{
+	           		fontColor:'#000'
+          			}
+        		},
+        	layout:{
+          		padding:{
+            		left:50,
+            		right:0,
+            		bottom:0,
+            		top:0
+          		}
+        	},
+        	tooltips:{
+          	enabled:true
+        }
+      }
+    });
+</script>
+</body>
+</html>

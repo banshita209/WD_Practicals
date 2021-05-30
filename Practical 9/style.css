@@ -1,0 +1,31 @@
+input{
+		width: 100%;
+	}
+	.center {
+		position:absolute;
+		top: 25%;
+		left: 30%;
+		border: 5px solid #371005;
+		padding: 10px;
+		background: rgba(55, 16, 5, 0.5);
+		color: white;
+		font-size: 20px;
+	}
+	body{
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-image: url('1.jpg');
+	}
+	thead{
+		font-size: 25px;
+		font-weight: bolder;
+	}
+	.add{
+		border: 2px solid white;
+		padding: 5px;
+		background: rgba(255, 255, 255, 0.5);
+	}
+	.btn{
+		color: white; 
+		background-color:rgb(55,16,5);
+	}
